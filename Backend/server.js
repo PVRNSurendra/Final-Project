@@ -159,31 +159,28 @@ app.post('/login', async (req, res) => {
   const { email, password } = req.body;
 
   try {
-    // Find the user by email in the database
     const user = await User.findOne({ email });
     if (!user) {
       return res.status(400).json({ message: 'Invalid credentials' });
     }
 
-    // Compare the hashed password with the entered password
+    // Validate the entered password against the hashed password
     const isPasswordValid = await bcrypt.compare(password, user.password);
     if (!isPasswordValid) {
       return res.status(400).json({ message: 'Invalid credentials' });
     }
 
-    // Generate JWT token if password is valid
+    // Generate JWT token if authentication is successful
     const token = jwt.sign(
       { userId: user._id, email: user.email },
-      process.env.JWT_SECRET,  // This should be in your .env file
+      process.env.JWT_SECRET,
       { expiresIn: '10h' }
     );
 
-    // Send the response with the token
     res.status(200).json({ message: 'Login successful', token });
   } catch (error) {
-    console.error('Error during login:', error.message);  // Log the error
-    console.error(error.stack);  // Log the stack trace for better debugging
-    res.status(500).json({ message: 'Internal Server Error', error: error.message });
+    console.error('Error during login:', error.message);
+    res.status(500).json({ message: 'Internal Server Error' });
   }
 });
 
