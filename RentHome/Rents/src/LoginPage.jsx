@@ -17,7 +17,7 @@ function LoginPage() {
     console.log('Sending login request:', { email, password });  // Log the payload here
   
     try {
-      const response = await axios.post('http://localhost:1026/login', { email, password });
+      const response = await axios.post('https://final-project-backend-5o6g.onrender.com/login', { email, password });
       if (response.status === 200) {
         const { token } = response.data;
         localStorage.setItem('authToken', token);
