@@ -60,7 +60,7 @@ function ListYourProperty() {
           />
         </div>
         <div className="form-group">
-          <label htmlFor="description">Property Description</label>
+          <label htmlFor="description">Location</label>
           <textarea
             name="description"
             id="description"
