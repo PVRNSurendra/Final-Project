@@ -1,0 +1,46 @@
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 2rem;
+    width: 100%;  /* Ensure it fills the full width of the container */
+    box-sizing: border-box; /* Ensure padding is included in width */
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;  /* Constrain the content's width */
+    margin: 0 auto;  /* Center the content */
+    width: 100%;  /* Ensure it fills the parent container */
+  }
+  
+  .footer ul {
+    list-style-type: none;
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .footer ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .footer ul li a:hover {
+    color: var(--secondary-color);
+  }
+  
+  /* Make footer responsive */
+  @media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;  /* Stack items vertically on smaller screens */
+        text-align: center;  /* Center-align the content */
+    }
+  
+    .footer ul {
+        flex-direction: column;
+        gap: 0.5rem;  /* Reduce gap between list items */
+    }
+  }
+  
