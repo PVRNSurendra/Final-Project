@@ -28,7 +28,7 @@ function ListYourProperty() {
     }
 
     try {
-    const response = await fetch('http://localhost:1026/api/property', {
+    const response = await fetch('https://final-project-backend-5o6g.onrender.com/api/property', {
       method: 'POST',
       body: formData,
     });
