@@ -1,0 +1,52 @@
+.property-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+    padding: 20px;
+  }
+  
+  .property-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 250px; /* Set the width of each tile */
+    margin: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    padding: 20px;
+  }
+  
+  .property-card img {
+    width: 100%; /* Make the image take full width of the card */
+    height: 200px; /* Set a fixed height for the image */
+    object-fit: cover; /* Ensures the image is cropped to fill the area without distortion */
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .property-card h3 {
+    font-size: 1.2rem;
+    margin: 10px;
+    color: #333;
+    justify-content: center;
+  }
+  
+  .property-card p {
+    font-size: 1rem;
+    margin: 5px;
+    color: #555;
+  }
+  
+  .property-card:hover {
+    transform: translateY(-5px); /* Hover effect for interactivity */
+  }
+  
+  .property-list p {
+    font-size: 1.2rem;
+    color: #333;
+    text-align: center;
+  }
+  

@@ -1,0 +1,46 @@
+.listing-page {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .listing-details {
+    display: flex;
+    gap: 2rem;
+  }
+  
+  .listing-images {
+    flex: 1;
+  }
+  
+  .listing-images img {
+    width: 100%;
+    margin-bottom: 1rem;
+    border-radius: 4px;
+  }
+  
+  .listing-info {
+    flex: 1;
+  }
+  
+  .price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+  }
+  
+  .book-button {
+    display: inline-block;
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .book-button:hover {
+    background-color: #27ae60;
+  }
