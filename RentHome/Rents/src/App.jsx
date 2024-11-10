@@ -6,7 +6,7 @@ import HomePage from './HomePage.jsx';
 import ListingPage from './ListingPage.jsx';
 import SearchPage from './SearchPage.jsx';
 import LoginPage from './LoginPage.jsx';
-import SignupPage from './SignupPage.jsx';
+import SignUpPage from './SignUpPage.jsx';
 import ListYourProperty from './ListYourProperty.jsx';
 import Contact from './Contact.jsx';
 import Terms from './Terms.jsx';
@@ -37,7 +37,7 @@ function App() {
             <Route path="/listing/:id" element={<ListingPage />} />
             <Route path="/search" element={<SearchPage />} />
             <Route path="/login" element={<LoginPage />} />
-            <Route path="/signup" element={<SignupPage />} />
+            <Route path="/signup" element={<SignUpPage />} />
             <Route path="/list-your-property" element={<ListYourProperty />} />
             <Route path='/about' element={<Aboutus/>}></Route>
             <Route path='/privacy' element={<PrivacyPolicy/>}></Route>
