@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import axios from 'axios';
-import './SignupPage.css';
+import './SignUpPage.css';
 
-function SignupPage() {
+function SignUpPage() {
   const [username, setUsername] = useState(''); // Changed from name to username
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -14,7 +14,7 @@ function SignupPage() {
     e.preventDefault();
 
     try {
-      const response = await axios.post('http://localhost:1026/signup', {
+      const response = await axios.post('https://final-project-backend-5o6g.onrender.com/signup', {
         username, // Make sure this matches the field in your schema
         email,
         password,
@@ -77,4 +77,4 @@ function SignupPage() {
   );
 }
 
-export default SignupPage;
+export default SignUpPage;
